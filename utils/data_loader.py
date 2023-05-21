@@ -97,8 +97,6 @@ class videoLoader(data.IterableDataset):
         self.vid_cap = cv2.VideoCapture(vid_path)
         self.transforms_pre = transforms_pre
         self.transforms_post = transforms_post
-        self.vid_path = vid_path
-
 
     def __iter__(self):
 
@@ -111,8 +109,7 @@ class videoLoader(data.IterableDataset):
             # Capture frame-by-frame
             ret, fr = self.vid_cap.read()
             if ret:
-                if self.vid_path == 0:
-                    pfr = fr
+                pfr = fr
                 # Preprocess
                 fr = self.__preProc(fr)
 
@@ -149,10 +146,8 @@ class videoLoader(data.IterableDataset):
 
                 for transform in self.transforms_post:
                     inp, _ = transform(inp, fr[:, :, :1])
-                if self.vid_path == 0:
-                    yield inp, pfr
-                else:
-                    yield inp
+
+                yield inp, pfr
             # Break the loop
             else:
                 break
