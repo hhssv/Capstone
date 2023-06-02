@@ -25,9 +25,9 @@ Desktop - Desktop_inference.ipynb
 
 ## Desktop Preparation
 
-Installation the requirements.txt
+Installation the requirements.txt.
 - `pip install -r requirmenets.txt`
-- if needed, set the path by `cd /path/`
+- if needed, set the path by `cd /path/`.
 
 BSUV-Net
 - Download the trained models and the hrnet_v2 model files from the github.
@@ -36,8 +36,8 @@ BSUV-Net
 ## Performance
 
 Colab T4
-- 2.5sec per frame
+- 2.5sec per frame with 1280x720 resolution.
 
 GTX 1080ti 
-- 1.2sec per frame with 1280x720 resolution
-- 0.6sec per frame with 640x480 resolution
+- 1.2sec per frame with 1280x720 resolution.
+- 0.6sec per frame with 640x480 resolution.
