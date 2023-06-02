@@ -19,7 +19,7 @@ BSUV-Net
 
 ## Usage
 
-Colab - Colab_inference.ipynb **Only for Video Inference**
+Colab - Colab_inference.ipynb - **Only for Video Inference**
 
 Desktop - Desktop_inference.ipynb
 
@@ -32,3 +32,12 @@ Installation the requirements.txt
 BSUV-Net
 - Download the trained models and the hrnet_v2 model files from the github.
 - Place the trained models in `trained_models` folder and the hrner_v2 model files in `utils/segmentation/hrnet_v2` folder.
+
+## Performance
+
+Colab T4
+- 2.5sec per frame
+
+GTX 1080ti 
+- 1.2sec per frame with 1280x720 resolution
+- 0.6sec per frame with 640x480 resolution
